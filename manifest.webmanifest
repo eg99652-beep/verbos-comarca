@@ -1,0 +1,17 @@
+{
+  "name": "100 Verbos Irregulares",
+  "short_name": "100 Verbos",
+  "description": "Los 100 verbos irregulares en inglés con significado y pronunciación.",
+  "lang": "es",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f6f1df",
+  "theme_color": "#6a9a3c",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

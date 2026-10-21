@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>100 Verbos Irregulares</title>
+<meta name="description" content="Los 100 verbos irregulares en inglés con significado en español y pronunciación con voces naturales.">
+<meta name="theme-color" content="#6a9a3c">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="100 Verbos">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta property="og:title" content="100 Verbos Irregulares">
+<meta property="og:description" content="Verbos irregulares en inglés con significado y pronunciación.">
+<meta property="og:image" content="/icons/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Macondo&family=Alegreya:ital,wght@0,400;0,700;0,800;1,400&family=Alegreya+SC:wght@500;700&display=swap">
+<style>
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; -webkit-text-size-adjust: 100%; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+/* Layout: a hillside scene with a round hobbit door opens the page; below it a sticky control bar and a rounded "garden ledger" of verbs that stacks into cards on phones. Single deliberate daytime look. */
+:root {
+  color-scheme: light;
+  --sky: #dff0f2;
+  --bg: #f6f1df;
+  --card: #fffbef;
+  --ink: #2e2618;
+  --muted: #6e6248;
+  --line: #e2d7b6;
+  --grass: #6a9a3c;
+  --grass-dk: #3f6d27;
+  --door: #2f6b3a;
+  --brass: #c9952b;
+  --wood: #8a5a2f;
+  --past: #a4461d;
+  --part: #2f6b3a;
+  --font-display: "Macondo", "Papyrus", Georgia, serif;
+  --font-body: "Alegreya", Georgia, serif;
+  --font-label: "Alegreya SC", Georgia, serif;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { color: var(--ink); font-family: var(--font-body); font-size: 18px; line-height: 1.45; background: var(--bg); }
+
+/* Hillside hero */
+.hill { background: linear-gradient(180deg, var(--sky) 0%, #eef6e6 70%, var(--bg) 100%); }
+.hill-in {
+  max-width: 980px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 0;
+  display: grid; justify-items: center; text-align: center;
+}
+.scene { width: 100%; max-width: 760px; height: auto; display: block; }
+h1 {
+  font-family: var(--font-display); font-weight: 400; margin: -6px 0 0;
+  font-size: clamp(44px, 10vw, 76px); line-height: 1; color: var(--grass-dk);
+  text-shadow: 0 2px 0 #fff8e0;
+}
+.lede { margin: 8px 0 0; color: var(--muted); max-width: 54ch; text-wrap: balance; }
+
+.wrap {
+  max-width: 980px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 18px 56px;
+  display: grid; gap: 20px;
+}
+
+.controls {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); padding-block: 12px;
+  display: flex; flex-wrap: wrap; gap: 12px; align-items: end;
+  border-bottom: 3px dotted var(--line);
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.field { display: grid; gap: 4px; min-width: 0; }
+.field label { font-family: var(--font-label); font-size: 15px; color: var(--wood); font-weight: 700; }
+.field.grow { flex: 1 1 220px; }
+input[type="search"], select {
+  font: inherit; font-size: 17px; color: var(--ink); background: var(--card);
+  border: 2px solid var(--line); border-radius: 999px; padding: 7px 16px; width: 100%;
+}
+input[type="range"] { accent-color: var(--grass); width: 120px; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+
+.notice { margin: 0; padding: 10px 16px; border-radius: 14px; border: 2px solid var(--past); color: var(--past); background: var(--card); font-size: 16px; }
+
+.legend { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; font-family: var(--font-label); font-size: 15px; }
+.legend span { padding: 2px 12px; border-radius: 999px; background: var(--card); border: 2px solid var(--line); }
+.c-pres { color: var(--ink); } .c-past { color: var(--past); } .c-part { color: var(--part); }
+
+.list { display: grid; background: var(--card); border: 2px solid var(--line); border-radius: 22px; overflow: hidden; box-shadow: 0 8px 0 -2px var(--line); }
+.row, .head {
+  display: grid; grid-template-columns: 44px repeat(3, minmax(0, 1fr)) minmax(0, 1.15fr) 48px;
+  align-items: center; gap: 8px; padding: 9px 16px;
+}
+.head { font-family: var(--font-label); font-size: 15px; font-weight: 700; color: var(--wood); background: #f1e8cc; }
+.row + .row { border-top: 1px solid var(--line); }
+.row:nth-child(odd) { background: #fbf5e2; }
+.row { transition: background .2s; }
+.row.playing { background: #e4f0d2; }
+.num {
+  width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: #efe5c6; color: var(--wood); font-family: var(--font-label); font-weight: 700; font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+.form { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.lbl { display: none; }
+.word { font-size: 21px; font-weight: 800; overflow-wrap: anywhere; }
+.mean { font-style: italic; color: var(--muted); min-width: 0; overflow-wrap: anywhere; }
+
+button { font: inherit; cursor: pointer; }
+.say {
+  flex: none; width: 32px; height: 32px; border-radius: 50%; padding: 0;
+  border: 2px solid var(--line); background: var(--card); color: var(--grass-dk);
+  display: grid; place-items: center;
+  transition: background .15s, color .15s, border-color .15s, transform .15s;
+}
+.say:hover { border-color: var(--grass); transform: translateY(-1px); }
+.say.on { background: var(--grass); color: #fffbef; border-color: var(--grass-dk); }
+.say svg { width: 15px; height: 15px; }
+/* "Play all" is a tiny round hobbit door with a brass knob */
+.all { width: 42px; height: 42px; background: var(--door); color: #fff6d8; border: 3px solid var(--wood); position: relative; }
+.all::after { content: ""; position: absolute; width: 6px; height: 6px; border-radius: 50%; background: var(--brass); right: 5px; top: 50%; translate: 0 -50%; }
+.all:hover { border-color: var(--brass); }
+.all.on { background: var(--grass); }
+.empty { padding: 28px; text-align: center; color: var(--muted); font-style: italic; }
+
+footer { text-align: center; color: var(--muted); font-style: italic; }
+
+/* Tablet and phone: each verb becomes its own card — two columns on tablets, one on phones */
+@media (max-width: 1024px) {
+  .list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; background: transparent; border: 0; border-radius: 0; box-shadow: none; overflow: visible; }
+  .head { display: none; }
+  .row, .row:nth-child(odd) { background: var(--card); }
+  .row + .row { border-top: 2px solid var(--line); }
+  .row {
+    border: 2px solid var(--line); border-radius: 20px; box-shadow: 0 5px 0 -1px var(--line);
+    grid-template-columns: 1fr auto; grid-template-areas: "n all" "m m" "a a" "b b" "c c"; gap: 8px; padding: 14px 16px;
+  }
+  .row.playing { background: #e4f0d2; }
+  .num { grid-area: n; }
+  .all { grid-area: all; }
+  .mean { grid-area: m; font-size: 19px; color: var(--ink); }
+  .form:nth-of-type(1) { grid-area: a; } .form:nth-of-type(2) { grid-area: b; } .form:nth-of-type(3) { grid-area: c; }
+  .lbl { display: inline-block; width: 92px; flex: none; font-family: var(--font-label); font-size: 15px; color: var(--wood); }
+}
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .list { grid-template-columns: minmax(0, 1fr); }
+  .hill-in { padding-block: 12px 0; }
+  .lede { font-size: 16px; }
+  .controls { gap: 10px; }
+  .field.grow { flex-basis: 100%; }
+  .controls .field:not(.grow) { flex: 1 1 0; }
+  input[type="range"] { width: 100%; }
+  .legend { font-size: 14px; gap: 6px; }
+}
+/* Touch screens: bigger speaker buttons so they are easy to tap */
+@media (pointer: coarse) {
+  .say { width: 40px; height: 40px; }
+  .say svg { width: 18px; height: 18px; }
+  .all { width: 48px; height: 48px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+.smoke { animation: drift 6s ease-in-out infinite; transform-origin: center; }
+.smoke:nth-of-type(2) { animation-delay: 2s; } .smoke:nth-of-type(3) { animation-delay: 4s; }
+@keyframes drift { 0% { opacity: 0; transform: translate(0, 6px) scale(.7); } 30% { opacity: .7; } 100% { opacity: 0; transform: translate(10px, -22px) scale(1.3); } }
+.flabel { font-family: var(--font-label); font-size: 15px; color: var(--wood); font-weight: 700; }
+.seg { display: inline-flex; border: 2px solid var(--line); border-radius: 999px; background: var(--card); padding: 3px; gap: 3px; }
+.seg button { border: 0; border-radius: 999px; background: transparent; color: var(--muted); padding: 6px 16px; font-family: var(--font-body); font-size: 17px; font-weight: 700; }
+.seg button[aria-pressed="true"] { background: var(--grass); color: #fffbef; }
+.install-row { display: flex; flex-wrap: wrap; gap: 8px 12px; justify-content: center; align-items: center; margin-top: 12px; }
+.install { border: 3px solid var(--wood); background: var(--door); color: #fff6d8; border-radius: 999px; padding: 8px 20px; font-family: var(--font-label); font-size: 17px; font-weight: 700; }
+.install:hover { border-color: var(--brass); }
+.ios-hint { margin: 0; font-size: 15px; color: var(--muted); }
+@media (max-width: 600px) { .seg { display: flex; } .seg button { flex: 1; } }
+
+</style>
+</head>
+<body>
+<section class="hill">
+  <div class="hill-in">
+    <svg class="scene" viewBox="0 0 760 250" role="img" aria-label="Colina con una puerta redonda de hobbit">
+      <circle cx="660" cy="52" r="26" fill="#f7d774"/>
+      <!-- chimney smoke -->
+      <circle class="smoke" cx="470" cy="70" r="9" fill="#ffffff"/>
+      <circle class="smoke" cx="474" cy="60" r="11" fill="#ffffff"/>
+      <circle class="smoke" cx="468" cy="50" r="8" fill="#ffffff"/>
+      <!-- back hills -->
+      <path d="M0 170 Q120 100 250 150 T520 140 T760 150 V250 H0Z" fill="#a9cc7c"/>
+      <!-- chimney -->
+      <rect x="458" y="78" width="22" height="34" rx="3" fill="#9a6a3c"/>
+      <!-- main hill -->
+      <path d="M90 250 Q140 110 380 96 Q620 110 670 250Z" fill="#7aab45"/>
+      <path d="M90 250 Q140 110 380 96 Q620 110 670 250Z" fill="none" stroke="#5e8d33" stroke-width="3"/>
+      <!-- round windows -->
+      <g fill="#f3e3a7" stroke="#8a5a2f" stroke-width="5">
+        <circle cx="250" cy="182" r="17"/><circle cx="510" cy="182" r="17"/>
+      </g>
+      <g stroke="#8a5a2f" stroke-width="3"><line x1="250" y1="165" x2="250" y2="199"/><line x1="233" y1="182" x2="267" y2="182"/><line x1="510" y1="165" x2="510" y2="199"/><line x1="493" y1="182" x2="527" y2="182"/></g>
+      <!-- door frame stones -->
+      <circle cx="380" cy="190" r="60" fill="#b99a6b"/>
+      <circle cx="380" cy="190" r="52" fill="#2f6b3a"/>
+      <g stroke="#245830" stroke-width="2" fill="none">
+        <circle cx="380" cy="190" r="40"/><circle cx="380" cy="190" r="26"/>
+        <line x1="380" y1="138" x2="380" y2="242"/><line x1="328" y1="190" x2="432" y2="190"/>
+      </g>
+      <circle cx="380" cy="190" r="8" fill="#c9952b" stroke="#8a6414" stroke-width="2"/>
+      <!-- path -->
+      <path d="M352 250 Q372 236 380 242 Q392 236 408 250Z" fill="#d9c08f"/>
+      <!-- flowers & fence -->
+      <g fill="#e35d5d"><circle cx="160" cy="232" r="5"/><circle cx="178" cy="238" r="4"/><circle cx="590" cy="234" r="5"/></g>
+      <g fill="#f2c94c"><circle cx="196" cy="230" r="4"/><circle cx="606" cy="240" r="4"/><circle cx="572" cy="240" r="4"/></g>
+      <g stroke="#8a5a2f" stroke-width="4" stroke-linecap="round"><line x1="40" y1="250" x2="40" y2="214"/><line x1="78" y1="250" x2="78" y2="214"/><line x1="30" y1="226" x2="88" y2="226"/><line x1="690" y1="250" x2="690" y2="214"/><line x1="728" y1="250" x2="728" y2="214"/><line x1="680" y1="226" x2="738" y2="226"/></g>
+    </svg>
+    <h1>100 Verbos</h1>
+    <p class="lede">Toca la bocina junto a cada forma para oír su pronunciación, o la puertita verde del final para escuchar las tres seguidas.</p>
+    <div class="install-row">
+      <button type="button" class="install" id="install" hidden>Instalar app</button>
+      <p class="ios-hint" id="iosHint" hidden>Para instalarla: toca <b>Compartir</b> y luego <b>Agregar a pantalla de inicio</b>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="controls">
+    <div class="field grow">
+      <label for="q">Buscar</label>
+      <input id="q" type="search" placeholder="En inglés o español: go, went, comer…" autocomplete="off">
+    </div>
+    <div class="field">
+      <span class="flabel" id="voiceLbl">Voz</span>
+      <div class="seg" role="group" aria-labelledby="voiceLbl">
+        <button type="button" id="vf" data-voice="f" aria-pressed="true">Mujer</button>
+        <button type="button" id="vm" data-voice="m" aria-pressed="false">Hombre</button>
+      </div>
+    </div>
+    <div class="field">
+      <label for="accent">Acento</label>
+      <select id="accent">
+        <option value="us">Estadounidense</option>
+        <option value="gb">Británico</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="rate">Velocidad</label>
+      <input id="rate" type="range" min="0.6" max="1.3" step="0.1" value="1">
+    </div>
+  </div>
+
+  <p class="notice" id="audioErr" hidden>No se pudo reproducir el audio. Revisa tu conexión o que el volumen no esté en silencio.</p>
+
+  <div class="legend">
+    <span class="c-pres">Presente</span>
+    <span class="c-past">Pasado</span>
+    <span class="c-part">Participio</span>
+    <span><i>Significado</i></span>
+  </div>
+
+  <div class="list" id="list" role="table" aria-label="Verbos irregulares">
+    <div class="head" role="row">
+      <span>#</span><span>Presente</span><span class="c-past">Pasado</span><span class="c-part">Participio</span><span>Significado</span><span></span>
+    </div>
+  </div>
+
+  <footer>Para repasar antes del segundo desayuno.</footer>
+</div>
+
+<script>
+const VERBS = `be|was/were|been|ser, estar
+become|became|become|convertirse, llegar a ser
+begin|began|begun|empezar, comenzar
+break|broke|broken|romper
+bring|brought|brought|traer
+build|built|built|construir
+buy|bought|bought|comprar
+catch|caught|caught|atrapar, agarrar
+choose|chose|chosen|elegir, escoger
+come|came|come|venir
+cost|cost|cost|costar
+cut|cut|cut|cortar
+do|did|done|hacer
+draw|drew|drawn|dibujar
+drink|drank|drunk|beber, tomar
+drive|drove|driven|manejar, conducir
+eat|ate|eaten|comer
+fall|fell|fallen|caer
+feel|felt|felt|sentir
+fight|fought|fought|pelear, luchar
+find|found|found|encontrar
+fly|flew|flown|volar
+forget|forgot|forgotten|olvidar
+forgive|forgave|forgiven|perdonar
+get|got|got/gotten|obtener, conseguir
+give|gave|given|dar
+go|went|gone|ir
+grow|grew|grown|crecer, cultivar
+have|had|had|tener, haber
+hear|heard|heard|oír
+hide|hid|hidden|esconder, ocultar
+hit|hit|hit|golpear
+hold|held|held|sostener, sujetar
+hurt|hurt|hurt|lastimar, doler
+keep|kept|kept|guardar, mantener
+know|knew|known|saber, conocer
+leave|left|left|irse, dejar
+lend|lent|lent|prestar
+let|let|let|dejar, permitir
+lose|lost|lost|perder
+make|made|made|hacer, fabricar
+mean|meant|meant|significar, querer decir
+meet|met|met|conocer (a alguien), reunirse
+pay|paid|paid|pagar
+put|put|put|poner
+read|read|read|leer
+ride|rode|ridden|montar, andar en
+ring|rang|rung|sonar, llamar (por teléfono)
+rise|rose|risen|subir, elevarse
+run|ran|run|correr
+say|said|said|decir
+see|saw|seen|ver
+sell|sold|sold|vender
+send|sent|sent|enviar, mandar
+shake|shook|shaken|sacudir, agitar
+shine|shone|shone|brillar
+shoot|shot|shot|disparar
+show|showed|shown|mostrar, enseñar
+shut|shut|shut|cerrar
+sing|sang|sung|cantar
+sink|sank|sunk|hundir, hundirse
+sit|sat|sat|sentarse
+sleep|slept|slept|dormir
+speak|spoke|spoken|hablar
+spend|spent|spent|gastar, pasar (tiempo)
+stand|stood|stood|estar de pie, pararse
+steal|stole|stolen|robar
+swim|swam|swum|nadar
+take|took|taken|tomar, llevar
+teach|taught|taught|enseñar
+tear|tore|torn|rasgar, romper
+tell|told|told|contar, decir
+think|thought|thought|pensar
+throw|threw|thrown|lanzar, tirar
+understand|understood|understood|entender, comprender
+wake|woke|woken|despertar
+wear|wore|worn|llevar puesto, usar (ropa)
+win|won|won|ganar
+write|wrote|written|escribir
+beat|beat|beaten|vencer, golpear
+bite|bit|bitten|morder
+blow|blew|blown|soplar
+deal|dealt|dealt|tratar, repartir
+dig|dug|dug|cavar
+feed|fed|fed|alimentar, dar de comer
+freeze|froze|frozen|congelar
+hang|hung|hung|colgar
+lay|laid|laid|colocar, poner
+lead|led|led|guiar, dirigir
+light|lit|lit|encender, iluminar
+seek|sought|sought|buscar
+smell|smelled/smelt|smelled/smelt|oler
+stick|stuck|stuck|pegar
+strike|struck|struck|golpear, atacar
+sweep|swept|swept|barrer
+weep|wept|wept|llorar
+withdraw|withdrew|withdrawn|retirar, retirarse
+arise|arose|arisen|surgir
+prove|proved|proven/proved|probar, demostrar
+learn|learned/learnt|learned/learnt|aprender`.split("\n").map((l, i) => { const [a, b, c, m] = l.split("|"); return { n: i + 1, forms: [a, b, c], mean: m }; });
+const slug = t => t.toLowerCase().replace(/[^a-z]+/g, "-").replace(/^-|-$/g, "");
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+// Clip names for spellings recorded phonetically: "read" past = /red/, "tear" (rasgar) = /tɛər/
+const SPOKEN = { "1|read": "red", "2|read": "red", "0|tear": "tare" };
+const clip = (word, idx) => slug(word.split("/").map(w => SPOKEN[idx + "|" + w] || w).join(", "));
+
+const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>';
+const LABELS = ["Presente", "Pasado", "Participio"];
+const CLS = ["c-pres", "c-past", "c-part"];
+
+const list = document.getElementById("list");
+const q = document.getElementById("q");
+const accentSel = document.getElementById("accent");
+const rate = document.getElementById("rate");
+const segBtns = [...document.querySelectorAll(".seg button")];
+const audioErr = document.getElementById("audioErr");
+let gender = "f";
+
+try {
+  const s = JSON.parse(localStorage.getItem("verbos-prefs") || "{}");
+  if (s.accent === "us" || s.accent === "gb") accentSel.value = s.accent;
+  if (s.rate) rate.value = s.rate;
+  if (s.gender === "m" || s.gender === "f") gender = s.gender;
+} catch (e) {}
+const savePrefs = () => { try { localStorage.setItem("verbos-prefs", JSON.stringify({ accent: accentSel.value, rate: rate.value, gender })); } catch (e) {} };
+const voiceDir = () => `${accentSel.value}-${gender}`;
+function paintSeg() { segBtns.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.voice === gender))); }
+segBtns.forEach(b => b.addEventListener("click", () => { gender = b.dataset.voice; paintSeg(); savePrefs(); prefetchVoice(); }));
+accentSel.addEventListener("change", () => { savePrefs(); prefetchVoice(); });
+rate.addEventListener("change", savePrefs);
+rate.addEventListener("input", () => { player.playbackRate = parseFloat(rate.value); });
+paintSeg();
+
+// One reused <audio> element: iOS Safari only lets an element play after a tap, then keeps allowing it
+const player = new Audio();
+player.preload = "auto";
+if ("preservesPitch" in player) player.preservesPitch = true;
+let queue = [], activeBtn = null, activeRow = null, gapTimer = null;
+
+function clearActive() {
+  activeBtn && activeBtn.classList.remove("on");
+  activeRow && activeRow.classList.remove("playing");
+  activeBtn = activeRow = null;
+}
+function stop() { clearTimeout(gapTimer); queue = []; player.pause(); clearActive(); }
+function playNext() {
+  if (!queue.length) { clearActive(); return; }
+  player.src = `audio/${voiceDir()}/${queue.shift()}.mp3`;
+  player.playbackRate = parseFloat(rate.value);
+  const p = player.play();
+  if (p && p.catch) p.catch(err => { if (err.name !== "AbortError") { audioErr.hidden = false; stop(); } });
+}
+player.addEventListener("playing", () => { audioErr.hidden = true; });
+player.addEventListener("ended", () => { if (queue.length) gapTimer = setTimeout(playNext, 350); else clearActive(); });
+player.addEventListener("error", () => { audioErr.hidden = false; stop(); });
+
+function play(clips, btn, row) {
+  stop();
+  activeBtn = btn; activeRow = row;
+  btn.classList.add("on"); row.classList.add("playing");
+  queue = clips.slice();
+  playNext();
+}
+
+function render() {
+  const term = norm(q.value.trim());
+  list.querySelectorAll(".row, .empty").forEach(el => el.remove());
+  const rows = VERBS.filter(v => !term || v.forms.some(f => f.toLowerCase().includes(term)) || norm(v.mean).includes(term));
+  if (!rows.length) {
+    const e = document.createElement("div"); e.className = "empty";
+    e.textContent = `Ningún verbo coincide con “${q.value}”.`;
+    list.appendChild(e); return;
+  }
+  const frag = document.createDocumentFragment();
+  rows.forEach(v => {
+    const row = document.createElement("div");
+    row.className = "row"; row.setAttribute("role", "row");
+    row.innerHTML = `<span class="num">${v.n}</span>` + v.forms.map((f, i) =>
+      `<div class="form"><span class="lbl">${LABELS[i]}</span><button class="say" data-i="${i}" aria-label="Escuchar ${f}">${ICON}</button><span class="word ${CLS[i]}">${f}</span></div>`
+    ).join("") + `<span class="mean">${v.mean}</span><button class="say all" aria-label="Escuchar las tres formas de ${v.forms[0]}" title="Escuchar las tres">${ICON}</button>`;
+    row.querySelectorAll(".form .say").forEach(b => b.addEventListener("click", () => play([clip(v.forms[b.dataset.i], +b.dataset.i)], b, row)));
+    const all = row.querySelector(".all");
+    all.addEventListener("click", () => play(v.forms.map(clip), all, row));
+    frag.appendChild(row);
+  });
+  list.appendChild(frag);
+}
+q.addEventListener("input", render);
+render();
+
+// Offline: register the service worker, then quietly download the chosen voice so it works without internet
+const allClips = [...new Set(VERBS.flatMap(v => v.forms.map(clip)))];
+let prefetched = new Set();
+async function prefetchVoice() {
+  if (!("serviceWorker" in navigator) || !navigator.serviceWorker.controller) return;
+  const dir = voiceDir();
+  if (prefetched.has(dir)) return;
+  prefetched.add(dir);
+  for (let i = 0; i < allClips.length; i += 12) {
+    await Promise.all(allClips.slice(i, i + 12).map(c => fetch(`audio/${dir}/${c}.mp3`).catch(() => {})));
+  }
+}
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => navigator.serviceWorker.ready).then(() => setTimeout(prefetchVoice, 1500)).catch(() => {});
+  navigator.serviceWorker.addEventListener("controllerchange", () => setTimeout(prefetchVoice, 1500));
+}
+
+// Install: real button on Chrome/Edge/Android; instructions on iPhone/iPad Safari
+const installBtn = document.getElementById("install");
+const iosHint = document.getElementById("iosHint");
+const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+let deferredPrompt = null;
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredPrompt = e; if (!standalone) installBtn.hidden = false; });
+installBtn.addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null; installBtn.hidden = true;
+});
+window.addEventListener("appinstalled", () => { installBtn.hidden = true; });
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+if (isIOS && !standalone) iosHint.hidden = false;
+
+</script>
+</body>
+</html>
