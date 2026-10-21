@@ -14,4 +14,4 @@ En línea: https://verbos-comarca.vercel.app
 ## Publicar
 Cada push a `main` se publica solo en Vercel.
 
-Si cambias `index.html` o los audios, sube la versión en `sw.js` (`verbos-v1` → `verbos-v2`) para que los celulares que la tienen instalada se actualicen.
+Si cambias `index.html` o los audios, sube la versión en `sw.js` (por ejemplo `verbos-v2` → `verbos-v3`) para que los celulares que la tienen instalada se actualicen.
